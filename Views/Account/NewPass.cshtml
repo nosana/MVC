@@ -1,0 +1,34 @@
+﻿@model WebApp.Models.User
+
+
+@{
+    ViewData["Title"] = "NewPass";
+}
+
+<h1>NewPass</h1>
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <form asp-action="NewPass" asp-controller="Account">
+                <div class="form-group mb-3">
+                    <label class="control-label">New Password</label>
+                    <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                    
+                    
+                    
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Send" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
